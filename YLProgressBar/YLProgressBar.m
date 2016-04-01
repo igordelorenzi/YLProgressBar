@@ -453,12 +453,7 @@ const CGFloat YLProgressBarDefaultProgress = 0.3f;
 
     CGFloat delta      = 1.0f / [_colors count];
     CGFloat semi_delta = delta / 2.0f;
-    CGFloat locations[colorCount];
-
-    for (NSInteger i = 0; i < colorCount; i++)
-    {
-      locations[i] = delta * i + semi_delta;
-    }
+    CGFloat locations[] = {0, 0};
 
     CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, colorRefs, locations);
 
